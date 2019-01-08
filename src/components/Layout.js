@@ -5,6 +5,15 @@ import { StaticQuery, graphql } from "gatsby"
 import Navbar from '../components/Navbar'
 import './all.sass'
 
+import imgLogo from '../img/customLogoa0e8.jpg'
+import imgTopDentistsLogo from '../img/5280_TopDentistsLogo_2015.jpg'
+import imgAda from '../img/ada.jpg'
+import imgCda from '../img/_cda_logo_sized.jpg'
+import imgMdds from '../img/_mdds logo_main.jpg'
+import imgWaterlase from '../img/waterlase.jpg'
+import imgE4d1 from '../img/e4d1.jpg'
+import imgBanner from '../img/banner-v4.jpg'
+
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -23,11 +32,11 @@ const TemplateWrapper = ({ children }) => (
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
           <meta name="description" content={data.site.siteMetadata.description} />
-          
+
           <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
 	        <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
 	        <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
-	
+
 	        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
 	        <meta name="theme-color" content="#fff" />
 
@@ -36,8 +45,52 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
+        <section className="hero is-medium">
+          <img className="image heroImage" src={imgLogo} alt="Dr. Gregory Waters, DDS"/>
+        </section>
         <Navbar />
-        <div>{children}</div>
+        <div className="container is-fluid">
+          <div className="columns">
+            <div className="column is-one-quarter">
+              <div className="container image is-fluid">
+                <img src={imgTopDentistsLogo} alt="TopDentists"/>
+              </div>
+              <h4><strong>Member of:</strong></h4>
+              <div className="container image is-128x128">
+                <img src={imgAda} alt="Ada"/>
+              </div>
+              <div className="container image is-fluid">
+                <img src={imgCda} alt="Cda"/>
+              </div>
+              <h5 className="has-text-centered">Metro Denver Dental Society</h5>
+              <div className="container image is-128x128">
+                <img src={imgMdds} alt="Mdds"/>
+              </div>
+              <div className="container image is-128x128">
+                <img src={imgWaterlase} alt="waterlase"/>
+              </div>
+              <h5 className="has-text-centered">Same Day Crowns</h5>
+              <div className="container image is-128x128">
+                <img src={imgE4d1} alt="E4D1"/>
+              </div>
+              <div className="image is-fluid">
+                <img src={imgBanner} alt="banner-v4"/>
+              </div>
+            </div>
+            <div className="column">{children}</div>
+          </div>
+        </div>
+        <footer className="footer">
+          <div className="content has-text-centered">
+            <strong>Gregory B. Waters, DDS, PC | 8850 Ralston Road, Suite 104, Arvada, CO 80002 | (303) 420-3233</strong>
+            <br/>
+            <strong>
+              <a href="https://patient.sesamecommunications.com/gwaters/index.html">Patient Portal Login</a>
+            </strong>
+            <br/>
+            <a href="http://www.avdvco.com/">Add Value Development</a>
+          </div>
+        </footer>
       </div>
     )}
   />

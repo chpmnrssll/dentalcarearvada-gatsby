@@ -8,6 +8,11 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
+$footer-background-color: #fff
+
+*
+  font-family: "Lucida Grande","Lucida Sans Unicode", Arial, sans-serif
+  font-size: 1rem
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -43,5 +48,49 @@ $body-color: #333
 
 .margin-top-0
   margin-top: 0 !important
+
+// .navbar-menu
+//   background-color: #adbd97
+
+.heroImage
+  // Keep aspect ratio from orignal 950x175 logo at full screen width
+  height: calc(100vw / 5.42857142857)
+
+.image
+  // border: 1px solid black
+
+.columns
+  margin-top: 0 !important
+
+.column
+  div
+    margin-bottom: 1rem
+
+.column-header
+  background-color: rgb(104,193,98) !important
+  color: white !important
+  width: 100%
+
+.reviews
+  border: 1px solid black
+  margin-top: .75rem
+  padding: 0 !important
+
+  *
+    padding: .75rem
+
+  li
+    border-bottom: 1px dotted black
+
+  h4
+    background-color: rgb(201, 211, 187)
+    border-bottom: 1px solid black
+    padding: 0 !important
+
+  .percentage
+    color: rgb(23,139,5)
+    font-size: 24px
+    font-weight: bold
+    padding: 0
 
 @import "~bulma"
