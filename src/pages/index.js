@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
       <section>
         {/* <h3>Dr. Gregory Waters, DDS</h3> */}
         <Link to="https://patient.sesamecommunications.com/gwaters/index.html">
-          Patient Login
+          Patient Portal Login
         </Link>
         <br/>
         <div className="image is-fluid">

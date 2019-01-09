@@ -1,8 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
-import Navbar from '../components/Navbar'
+import MobileNavBar from '../components/MobileNavBar'
+import DesktopTabBar from '../components/DesktopTabBar'
 import './all.sass'
 
 import imgLogo from '../img/customLogoa0e8.jpg'
@@ -48,7 +49,8 @@ const TemplateWrapper = ({ children }) => (
         <section className="hero is-medium">
           <img className="image heroImage" src={imgLogo} alt="Dr. Gregory Waters, DDS"/>
         </section>
-        <Navbar />
+        <MobileNavBar />
+        <DesktopTabBar />
         <div className="container is-fluid">
           <div className="columns">
             <div className="column is-one-quarter">
@@ -84,11 +86,9 @@ const TemplateWrapper = ({ children }) => (
           <div className="content has-text-centered">
             <strong>Gregory B. Waters, DDS, PC | 8850 Ralston Road, Suite 104, Arvada, CO 80002 | (303) 420-3233</strong>
             <br/>
-            <strong>
-              <a href="https://patient.sesamecommunications.com/gwaters/index.html">Patient Portal Login</a>
-            </strong>
-            <br/>
             <a href="http://www.avdvco.com/">Add Value Development</a>
+            <br/>
+            <a href="/admin">Netlify Login</a>
           </div>
         </footer>
       </div>
