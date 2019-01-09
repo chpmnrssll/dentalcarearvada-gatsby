@@ -5,6 +5,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import MobileNavBar from '../components/MobileNavBar'
 import DesktopTabBar from '../components/DesktopTabBar'
 import './all.sass'
+import Footer from '../components/Footer'
 
 import imgLogo from '../img/customLogoa0e8.jpg'
 import imgTopDentistsLogo from '../img/5280_TopDentistsLogo_2015.jpg'
@@ -82,18 +83,9 @@ const TemplateWrapper = ({ children }) => (
             <div className="column">{children}</div>
           </div>
         </div>
-        <footer className="footer">
-          <div className="content has-text-centered">
-            <strong>Gregory B. Waters, DDS, PC | 8850 Ralston Road, Suite 104, Arvada, CO 80002 | (303) 420-3233</strong>
-            <br/>
-            <a href="http://www.avdvco.com/">Add Value Development</a>
-            <br/>
-            <a href="/admin">Netlify Login</a>
-          </div>
-        </footer>
       </div>
-    )}
-  />
-)
+    </div>
+    <Footer/>
+  </div>)}/>)
 
 export default TemplateWrapper
