@@ -2,7 +2,9 @@ import React from 'react'
 import Layout from '../../components/Layout'
 
 const FormsPage = ({data}) => (<Layout>
-  <h3 className="is-size-3">Forms</h3>
+  <section className="section">
+    <h3 className="is-size-3">Forms</h3>
+  </section>
   <section className="section">
     <b>Prior to your visit...</b>
     <p>Feel free to access forms below to save a few minutes prior to your appointment time. Thanks for your interest!</p>

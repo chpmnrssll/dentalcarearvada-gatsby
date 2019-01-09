@@ -3,7 +3,9 @@ import Layout from '../../components/Layout'
 
 const ProviderPage = ({data}) => (
 <Layout>
-  <h3 className="is-size-3">Preferred Provider</h3>
+  <section className="section">
+    <h3 className="is-size-3">Preferred Provider</h3>
+  </section>
   <section className="section">
     <p>Dr. Waters proudly participates as a preferred provider for the following Dental Health Insurance Plans:</p>
   </section>

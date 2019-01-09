@@ -1,12 +1,14 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 
-const AppointmentsPage = ({ data }) => (
-  <Layout>
+const AppointmentsPage = ({data}) => (<Layout>
+  <section className="section">
     <table>
       <thead>
         <tr>
-          <th><b>Hours:</b></th>
+          <th>
+            <b>Hours:</b>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -32,7 +34,7 @@ const AppointmentsPage = ({ data }) => (
         </tr>
       </tbody>
     </table>
-  </Layout>
-)
+  </section>
+</Layout>)
 
 export default AppointmentsPage
