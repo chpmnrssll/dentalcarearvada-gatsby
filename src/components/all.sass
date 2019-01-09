@@ -66,6 +66,7 @@ $tabs-boxed-link-radius: 6px
   // border: 1px solid black
 
 .columns
+  // flex-direction: column-reverse
   margin-top: 0 !important
 
 .column
@@ -75,7 +76,7 @@ $tabs-boxed-link-radius: 6px
 .column-header
   background-color: rgb(104,193,98) !important
   color: white !important
-  width: 100%
+  // width: 100%
 
 .reviews
   border: 1px solid black
@@ -98,5 +99,12 @@ $tabs-boxed-link-radius: 6px
     font-size: 24px
     font-weight: bold
     padding: 0
+
+.pdfTable
+  thead
+    border-bottom: 1px solid $grey-lighter
+  tr
+    td
+      padding: .5rem
 
 @import "~bulma"
