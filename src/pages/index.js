@@ -66,13 +66,13 @@ export default class IndexPage extends React.Component {
       <h4 className="column-header">Clinically Proven State-of-the-Art Dental Technology</h4>
 
       <section className="columns">
-        <div className="column is-2 image is-fluid">
+        <div className="column image is-2x3">
           <img src={imgE4DConsole} alt="~E4D Console"/>
         </div>
-        <p className="column is-fluid">
+        <p className="column is-6">
           Dr. Waters uses modern, clinically proven methods to offer his patients the best quality care available. His practice is equipped with state of the art E4D technology, which can mill a custom crown on-site. Often with a single visit, Dr. Waters can offer procedures which previously required weeks. Same Day Crown: You may prefer the convenience and health benefits of eliminating multiple trips when a crowning procedure is necessary.
         </p>
-        <div className="column is-4 image is-fluid">
+        <div className="column image is-3x2">
           <img src={imgE4DMill} alt="~E4D mill"/>
         </div>
       </section>
