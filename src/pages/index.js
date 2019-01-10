@@ -18,16 +18,15 @@ export default class IndexPage extends React.Component {
     const {edges: reviews} = data.allMarkdownRemark
 
     return (<Layout>
+      <h3 className="is-size-3">Dr. Gregory Waters, DDS</h3>
       <section>
-        {/* <h3>Dr. Gregory Waters, DDS</h3> */}
-        <Link to="https://patient.sesamecommunications.com/gwaters/index.html">
+        <a href="https://patient.sesamecommunications.com/gwaters/index.html">
           Patient Portal Login
-        </Link>
-        <br/>
+        </a>
         <div className="image is-fluid">
-          <Link to="https://patient.sesamecommunications.com/gwaters/index.html">
+          <a href="https://patient.sesamecommunications.com/gwaters/index.html">
             <img src={imgSmileMore} alt="Smile More"/>
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -94,7 +93,9 @@ export default class IndexPage extends React.Component {
                       marginBottom: '1rem'
                     }}>
                       <Link to={review.fields.slug}>{review.frontmatter.title}</Link>
-                      {review.rawMarkdownBody}
+                      <p>
+                        {review.rawMarkdownBody}
+                      </p>
                     </div>
                     <cite>
                       {review.frontmatter.author} - {review.frontmatter.location}

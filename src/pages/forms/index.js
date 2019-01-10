@@ -22,8 +22,10 @@ const FormsPage = ({data}) => (<Layout>
       </thead>
       <tbody>
         <tr>
-          <td>
-            <td>New Patient Forms</td>
+          <td style={{
+              paddingBottom: '1rem'
+            }}>
+            <span>New Patient Forms</span>
             <div>
               <a href="/pdf/_NewPatientForms.pdf" rel="nofollow" target="_blank">View</a>
               &nbsp;|&nbsp;
@@ -35,7 +37,7 @@ const FormsPage = ({data}) => (<Layout>
         </tr>
         <tr>
           <td>
-            <td>Children's Health Hisory Form</td>
+            <span>Children's Health Hisory Form</span>
             <div>
               <a href="/pdf/health_history_engspan.pdf" rel="nofollow" target="_blank">View</a>
               &nbsp;|&nbsp;

@@ -1,11 +1,8 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 
-const ProviderPage = ({data}) => (
-<Layout>
-  <section className="section">
-    <h3 className="is-size-3">Preferred Provider</h3>
-  </section>
+const ProviderPage = ({data}) => (<Layout>
+  <h3 className="is-size-3">Preferred Provider</h3>
   <section className="section">
     <p>Dr. Waters proudly participates as a preferred provider for the following Dental Health Insurance Plans:</p>
   </section>
@@ -26,7 +23,6 @@ const ProviderPage = ({data}) => (
     <p>Cash, Check, Debit, Visa, Discover, Mastercard, Care Credit</p>
     <p>Please call for more information.</p>
   </section>
-</Layout>
-  )
+</Layout>)
 
 export default ProviderPage
