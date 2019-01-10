@@ -2,49 +2,48 @@ import React from 'react'
 import Layout from '../../components/Layout'
 
 const FormsPage = ({data}) => (<Layout>
-  <section className="section">
-    <h3 className="is-size-3">Forms</h3>
-  </section>
+  <h3 className="is-size-3">Forms</h3>
   <section className="section">
     <b>Prior to your visit...</b>
     <p>Feel free to access forms below to save a few minutes prior to your appointment time. Thanks for your interest!</p>
   </section>
   <section className="section">
-    <table className="pdfTable">
-      <thead>
+    <table style={{
+        width: '100%'
+      }}>
+      <thead style={{
+        borderBottom: '1px solid black'
+      }}>
         <tr>
-          <th>File name</th>
-          <th>Description</th>
-          <th>Size</th>
+          <th>File</th>
           <th>Date</th>
+          <th>Size</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <span>~NewPatientForms.pdf</span>
+            <td>New Patient Forms</td>
             <div>
               <a href="/pdf/_NewPatientForms.pdf" rel="nofollow" target="_blank">View</a>
               &nbsp;|&nbsp;
               <a href="/pdf/_NewPatientForms.pdf" rel="nofollow" target="_blank">Download</a>
             </div>
           </td>
-          <td>New Patient Forms</td>
-          <td>348k</td>
           <td><span>Jun 13, 2011</span></td>
+          <td>348k</td>
         </tr>
         <tr>
           <td>
-            <span>health_history_engspan.pdf</span>
+            <td>Children's Health Hisory Form</td>
             <div>
               <a href="/pdf/health_history_engspan.pdf" rel="nofollow" target="_blank">View</a>
               &nbsp;|&nbsp;
               <a href="/pdf/health_history_engspan.pdf" rel="nofollow" target="_blank">Download</a>
             </div>
           </td>
-          <td>Children's Health Hisory Form</td>
-          <td>113k</td>
           <td><span>Dec 16, 2010</span></td>
+          <td>113k</td>
         </tr>
       </tbody>
     </table>

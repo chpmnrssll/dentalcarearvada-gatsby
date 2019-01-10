@@ -8,7 +8,7 @@ import imgWaterlase from '../img/waterlase.jpg'
 import imgE4d1 from '../img/e4d1.jpg'
 import imgBanner from '../img/banner-v4.jpg'
 
-const SideBar = ({data}) => (<div className="column is-one-quarter">
+const SideBar = ({data}) => (<div>
   <section className="section has-text-centered">
     <div className="image is-3x4">
       <img src={imgTopDentistsLogo} alt="TopDentists"/>

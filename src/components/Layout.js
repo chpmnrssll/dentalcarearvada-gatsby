@@ -42,7 +42,9 @@ const TemplateWrapper = ({children}) => (<StaticQuery query={graphql `
     <DesktopTabBar/>
     <div className="container is-fluid">
       <div className="columns is-flex" id="Columns">
-        <SideBar/>
+        <div className="column is-one-fifth">
+          <SideBar/>
+        </div>
         <div className="column">
           {children}
         </div>

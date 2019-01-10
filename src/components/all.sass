@@ -12,16 +12,9 @@ $footer-background-color: $white
 $tabs-boxed-link-hover-background-color: $white
 $tabs-boxed-link-radius: 6px
 
-.tabs.is-boxed
-  li
-    margin: 0 .5rem
-
 *
   font-family: "Lucida Grande","Lucida Sans Unicode", Arial, sans-serif
   font-size: 1rem
-
-.navbar .navbar-menu
-  box-shadow:none !important
 
 .content .taglist
   list-style: none
@@ -55,60 +48,17 @@ $tabs-boxed-link-radius: 6px
 .margin-top-0
   margin-top: 0 !important
 
-// .navbar-menu
-//   background-color: #adbd97
-
+// Keep aspect ratio from orignal 950x175 logo at full screen width
 .heroImage
-  // Keep aspect ratio from orignal 950x175 logo at full screen width
   height: calc(100vw / 5.42857142857)
 
-.image
-  // border: 1px solid black
 
 .columns
   margin: 0 !important
 
+// Change order of main layout columns on small screens
 #Columns
   @media only screen and (max-width: $tablet)
     flex-direction: column-reverse
-
-.column
-  div
-    margin-bottom: 1rem
-
-.column-header
-  background-color: rgb(104,193,98) !important
-  color: white !important
-  // width: 100%
-
-.reviews
-  border: 1px solid black
-  // margin-top: .75rem
-  margin: 0
-  padding: 0 !important
-
-  *
-    padding: .75rem
-
-  li
-    border-bottom: 1px dotted black
-
-  h4
-    background-color: rgb(201, 211, 187)
-    border-bottom: 1px solid black
-    padding: 0 !important
-
-  .percentage
-    color: rgb(23,139,5)
-    font-size: 24px
-    font-weight: bold
-    padding: 0
-
-.pdfTable
-  thead
-    border-bottom: 1px solid $grey-lighter
-  tr
-    td
-      padding: .5rem
 
 @import "~bulma"
