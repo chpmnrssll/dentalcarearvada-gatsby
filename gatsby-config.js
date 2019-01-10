@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Dental Care Arvada',
+    author: 'Russell Chapman',
     description: 'Dentist Greg Waters quality dental care in Arvada, CO 80004. Waterlase, E4D, invisalign, General dentistry.',
+    siteUrl: 'https://dentalcarearvada.netlify.com/'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -58,6 +60,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: ``, // Insert you GA tracking ID here
+      },
+    },
+    `gatsby-plugin-feed`,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
