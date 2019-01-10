@@ -1,15 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import { graphql, Link } from 'gatsby'
+
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/Layout'
+
+import imgFemale from '../img/cf.gif'
+import imgMale from '../img/cm.gif'
 
 export const ReviewTemplate = ({
   helmet,
   author,
   date,
+  fields,
   icon,
   location,
   title,
@@ -19,20 +23,25 @@ export const ReviewTemplate = ({
   const ReviewContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section media">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{author}</p>
-            <p>{date}</p>
-            <p>{icon}</p>
-            <p>{location}</p>
-            <ReviewContent content={content} />
-          </div>
+      <div className="image is-1x1 media-left" style={{
+        paddingLeft: '2rem'
+      }}>
+        <img src={(icon === 'male') ? imgMale : imgFemale} alt="cf"/>
+      </div>
+      <div className="media-content">
+        <div style={{
+          marginBottom: '1rem'
+        }}>
+          <Link to={fields.slug}>{title}</Link>
+          <ReviewContent content={content} />
+        </div>
+        <cite>
+          {author} - {location}
+        </cite>
+        <div className="is-size-7">
+          Posted on {date}
         </div>
       </div>
     </section>
@@ -64,6 +73,7 @@ const Review = ({ data }) => {
         }
         author={review.frontmatter.author}
         date={review.frontmatter.date}
+        fields={review.fields}
         icon={review.frontmatter.icon}
         location={review.frontmatter.location}
         title={review.frontmatter.title}
@@ -87,6 +97,9 @@ export const reviewQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         author
         date(formatString: "MMMM DD, YYYY")

@@ -10,7 +10,7 @@ import imgE4DMill from '../img/_E4D_mill.jpg'
 import imgBannerv5 from '../img/banner-v5.jpg'
 
 import imgFemale from '../img/cf.gif'
-// import imgMale from '../img/cm.gif'
+import imgMale from '../img/cm.gif'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -86,7 +86,7 @@ export default class IndexPage extends React.Component {
                   <div className="image is-1x1 media-left" style={{
                     paddingLeft: '2rem'
                   }}>
-                    <img src={imgFemale} alt="cf"/>
+                    <img src={(review.frontmatter.icon === 'male') ? imgMale : imgFemale} alt="Avatar"/>
                   </div>
                   <div className="media-content">
                     <div style={{

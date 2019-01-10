@@ -4,10 +4,12 @@ import { ReviewTemplate } from '../../templates/review'
 
 const ReviewPreview = ({ entry, widgetFor }) => (
   <ReviewTemplate
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
+    author={entry.getIn(['data', 'author'])}
+    date={entry.getIn(['data', 'date'])}
+    icon={entry.getIn(['data', 'icon'])}
+    location={entry.getIn(['data', 'location'])}
     title={entry.getIn(['data', 'title'])}
+    content={widgetFor('body')}
   />
 )
 

@@ -6,40 +6,45 @@ import {v4} from 'uuid'
 import Layout from '../../components/Layout'
 
 import imgFemale from '../../img/cf.gif'
-// import imgMale from '../img/cm.gif'
+import imgMale from '../../img/cm.gif'
 
 export default class ReviewsPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: reviews } = data.allMarkdownRemark
+    const {data} = this.props
+    const {edges: reviews} = data.allMarkdownRemark
 
     return (<Layout>
-      <h4>Patient Reviews</h4>
-
+      <h3 className="is-size-3">Patient Reviews</h3>
       <ul>
-        <li>
-          <span className="percentage">99.3%</span> of patients would refer friends and family to us.
-        </li>
-        {reviews.map(review => (
-        <li key={v4()} className="media">
-          <div className="message-body">
-            <div className="image is-1x1 media-left">
-              <img src={imgFemale} alt="cf"/>
+        {
+          reviews.map(({node: review}) => (<li key={v4()} className="media" style={{
+              margin: '.5rem',
+              padding: '1rem .5rem'
+            }}>
+            <div className="image is-1x1 media-left" style={{
+                paddingLeft: '2rem'
+              }}>
+              <img src={(review.frontmatter.icon === 'male') ? imgMale : imgFemale} alt="Avatar"/>
             </div>
             <div className="media-content">
-              <div>
-                <Link to="/reviews/lovethisdentist">{review.title}</Link>
-                {review.html}
+              <div style={{
+                  marginBottom: '1rem'
+                }}>
+                <Link to={review.fields.slug}>{review.frontmatter.title}</Link>
+                <p>
+                  {review.rawMarkdownBody}
+                </p>
               </div>
-              <div>{review.author}</div>
-              <br/>
-              <div className="is-size-7">Posted {review.date}</div>
+              <cite>
+                {review.frontmatter.author}
+                - {review.frontmatter.location}
+              </cite>
+              <div className="is-size-7">
+                Posted on {review.frontmatter.date}
+              </div>
             </div>
-            <br />
-            <cite>{review.author} - {review.location}</cite>
-          </div>
-        </li>
-        ))}
+          </li>))
+        }
       </ul>
     </Layout>)
   }
@@ -47,10 +52,8 @@ export default class ReviewsPage extends React.Component {
 
 ReviewsPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+    allMarkdownRemark: PropTypes.shape({edges: PropTypes.array})
+  })
 }
 
 export const reviewsQuery = graphql `
@@ -63,6 +66,7 @@ export const reviewsQuery = graphql `
         node {
           excerpt(pruneLength: 400)
           id
+          rawMarkdownBody
           fields {
             slug
           }
