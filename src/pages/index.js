@@ -77,7 +77,7 @@ export default class IndexPage extends React.Component {
               </span>
             </li>
             {
-              /* Filter out all but the first 2 reviews */
+              /* Only get the first (n) reviews for widget */
               reviews.filter((review, index) => index < 2).map(({node: review}) => (
                 <li key={v4()} className="media" style={{
                   margin: '.5rem',
