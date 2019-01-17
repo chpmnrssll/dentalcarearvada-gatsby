@@ -1,12 +1,14 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import {Link, graphql} from 'gatsby'
 import {v4} from 'uuid'
-
 import Layout from '../../components/Layout'
 
 import imgFemale from '../../img/cf.gif'
 import imgMale from '../../img/cm.gif'
+
+const pageTitle = 'Reviews'
 
 export default class ReviewsPage extends React.Component {
   render() {
@@ -14,6 +16,13 @@ export default class ReviewsPage extends React.Component {
     const {edges: reviews} = data.allMarkdownRemark
 
     return (<Layout>
+      {/* Overwrite default title with pageTitle */}
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="title" content={pageTitle}/>
+        <meta itemprop="name" content={pageTitle}/>
+        <meta property="og:title" content={pageTitle}/>
+      </Helmet>
       <h3 className="is-size-3">Patient Reviews</h3>
       <ul>
         {

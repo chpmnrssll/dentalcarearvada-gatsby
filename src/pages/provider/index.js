@@ -1,7 +1,17 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../../components/Layout'
 
+const pageTitle = 'Preferred Provider'
+
 const ProviderPage = ({data}) => (<Layout>
+  {/* Overwrite default title with pageTitle */}
+  <Helmet>
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle}/>
+    <meta itemprop="name" content={pageTitle}/>
+    <meta property="og:title" content={pageTitle}/>
+  </Helmet>
   <h3 className="is-size-3">Preferred Provider</h3>
   <section className="section">
     <p>Dr. Waters proudly participates as a preferred provider for the following Dental Health Insurance Plans:</p>
