@@ -18,7 +18,6 @@ export default class IndexPage extends React.Component {
     const {edges: reviews} = data.allMarkdownRemark
 
     return (<Layout>
-      <h3 className="is-size-3">Dr. Gregory Waters, DDS</h3>
       <section>
         <a href="https://patient.sesamecommunications.com/gwaters/index.html">
           Patient Portal Login
@@ -41,7 +40,12 @@ export default class IndexPage extends React.Component {
           </h4>
           <br/>
           <p>
-            Welcome new and existing patients of Dr. Greg Waters, DDS to our online resource for you. Visiting our practice a uniquely warm and welcoming experience. You'll find we listen to your treatment goals and make your visits comfortable. Offering the very best quality care in an environment that values each patient is our goal. We'll help you achieve a beautiful and healthy smile. You can access our website to request an appointment, and find answers to your dental questions including procedure animations and informational resources. Information about our office, including directions, forms you can fill out prior to your visit, insurance carrier and forms of payment accepted are available online. Please don't hesitate to contact us by phone as well and enjoy your online visit.
+            Welcome new and existing patients of Dr. Greg Waters, DDS to our online resource for you. Visiting our practice a uniquely warm and welcoming experience. You'll find we listen to your treatment goals and make your visits comfortable. Offering the very best quality care in an environment that values each patient is our goal.&nbsp;
+            <span style={{
+                backgroundColor: 'rgb(255, 229, 153)',
+                fontFamily: 'serif'
+              }}>We'll help you achieve a beautiful and healthy smile.</span>&nbsp;
+            You can access our website to request an appointment, and find answers to your dental questions including procedure animations and informational resources. Information about our office, including directions, forms you can fill out prior to your visit, insurance carrier and forms of payment accepted are available online. Please don't hesitate to contact us by phone as well and enjoy your online visit.
           </p>
         </div>
 
