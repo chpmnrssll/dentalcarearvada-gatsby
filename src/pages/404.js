@@ -2,15 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
-const pageTitle = '404 | Not Found'
-
 const NotFoundPage = () => (
-  {/* Overwrite default title with pageTitle */}
+  {/* Overwrite default title with 404 */}
   <Helmet>
-    <title>{pageTitle}</title>
-    <meta name="title" content={pageTitle}/>
-    <meta itemprop="name" content={pageTitle}/>
-    <meta property="og:title" content={pageTitle}/>
+    <title>404</title>
+    <meta name="title" content="404"/>
+    <meta itemprop="name" content="404"/>
+    <meta property="og:title" content="404"/>
   </Helmet>
   <Layout>
     <h3>NOT FOUND</h3>
