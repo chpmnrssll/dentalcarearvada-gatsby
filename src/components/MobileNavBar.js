@@ -38,12 +38,12 @@ const MobileNavBar = class extends React.Component {
       <div className="navbar-menu has-text-centered" id="mobileNavMenu">
         <div className="navbar-start">
           <Link className="navbar-item" to="/">Home</Link>
-          <Link className="navbar-item" to="/practice">Our Practice</Link>
+          <Link className="navbar-item" to="/gallery">Our Practice</Link>
           <Link className="navbar-item" to="/reviews">Reviews</Link>
-          <Link className="navbar-item" to="/appointments">Appointments</Link>
+          <Link className="navbar-item" to="/contacts">Appointments</Link>
           <Link className="navbar-item" to="/directions">Directions & Map</Link>
-          <Link className="navbar-item" to="/provider">Preferred Provider</Link>
-          <Link className="navbar-item" to="/forms">Forms</Link>
+          <Link className="navbar-item" to="/Insurance--Preferred-Dental-Provider">Preferred Provider</Link>
+          <Link className="navbar-item" to="/careers">Forms</Link>
         </div>
       </div>
     </nav>)

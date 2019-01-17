@@ -7,23 +7,23 @@ const DesktopTabBar = ({ data }) => (
       <li id="/" style={{margin: '0 .5rem'}}>
         <Link className="navbar-item" to="/">Home</Link>
       </li>
-      <li id="/practice" style={{margin: '0 .5rem'}}>
-        <Link className="navbar-item" to="/practice">Our Practice</Link>
+      <li id="/gallery" style={{margin: '0 .5rem'}}>
+        <Link className="navbar-item" to="/gallery">Our Practice</Link>
       </li>
       <li id="/reviews" style={{margin: '0 .5rem'}}>
         <Link className="navbar-item" to="/reviews">Reviews</Link>
       </li>
-      <li id="/appointments" style={{margin: '0 .5rem'}}>
-        <Link className="navbar-item" to="/appointments">Appointments</Link>
+      <li id="/contacts" style={{margin: '0 .5rem'}}>
+        <Link className="navbar-item" to="/contacts">Appointments</Link>
       </li>
       <li id="/directions" style={{margin: '0 .5rem'}}>
         <Link className="navbar-item" to="/directions">Directions & Map</Link>
       </li>
-      <li id="/provider" style={{margin: '0 .5rem'}}>
-        <Link className="navbar-item" to="/provider">Preferred Provider</Link>
+      <li id="/Insurance--Preferred-Dental-Provider" style={{margin: '0 .5rem'}}>
+        <Link className="navbar-item" to="/Insurance--Preferred-Dental-Provider">Preferred Provider</Link>
       </li>
-      <li id="/forms" style={{margin: '0 .5rem'}}>
-        <Link className="navbar-item" to="/forms">Forms</Link>
+      <li id="/careers" style={{margin: '0 .5rem'}}>
+        <Link className="navbar-item" to="/careers">Forms</Link>
       </li>
     </ul>
   </nav>
