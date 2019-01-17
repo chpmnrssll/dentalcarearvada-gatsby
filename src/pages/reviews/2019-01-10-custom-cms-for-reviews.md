@@ -6,4 +6,4 @@ icon: male
 location: Simla
 title: Custom post type for Reviews
 ---
-This is a test of Netlify-CMS custom post type.
+This is a test of Netlify-CMS custom post type. Login to Netlify (in the footer of this page) to remove this entry.
