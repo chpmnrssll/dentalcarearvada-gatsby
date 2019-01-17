@@ -7,6 +7,7 @@ import Layout from '../../components/Layout'
 
 import imgFemale from '../../img/cf.gif'
 import imgMale from '../../img/cm.gif'
+import imgFeed from '../../img/icon_feed.gif'
 
 const pageTitle = 'Reviews'
 
@@ -24,6 +25,7 @@ export default class ReviewsPage extends React.Component {
         <meta property="og:title" content={pageTitle}/>
       </Helmet>
       <h3 className="is-size-3">Patient Reviews</h3>
+      <a href="rss.xml"><img src={imgFeed}/> Subscribe to reviews</a>
       <ul>
         {
           reviews.map(({node: review}) => (<li key={v4()} className="media" style={{
